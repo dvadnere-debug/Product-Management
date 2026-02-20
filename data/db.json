@@ -1,0 +1,66 @@
+{"users": [
+    {
+      "id": "1",
+      "username": "nerdyTech",
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "fullname": "John Doe",
+      "phone": "cvbnm,kkmk",
+      "gender": "Male",
+      "dob": "6666-05-04",
+      "address": "Chandni Chowk",
+      "zipCode": "",
+      "state": "Karnataka"
+    },
+    {
+      "id": "8d8a",
+      "userName": "Megatron",
+      "password": "654321",
+      "email": "megamega@gmail.com",
+      "phone": "IamMegatron"
+    },
+    {
+      "id": "05f4",
+      "userName": "coco",
+      "email": "coco@gmail.com",
+      "password": "123456",
+      "phone": "6767676767"
+    },
+    {
+      "id": "2e5d",
+      "userName": "R2D2",
+      "email": "starwars@gmail.com",
+      "password": "123456",
+      "phone": "2323232323"
+    },
+    {
+      "id": "2",
+      "userName": "rrere",
+      "email": "divya@gmail.com",
+      "password": "12Hh345678",
+      "phone": "2323232323"
+    },
+    {
+      "id": "4f85",
+      "userName": "",
+      "email": "b@gmail.com",
+      "password": "111111",
+      "phone": "1212121212",
+      "username": "techNerd",
+      "fullname": "",
+      "gender": "Gender",
+      "dob": "",
+      "address": "",
+      "zipCode": "",
+      "state": ""
+    },
+    {
+      "id": "421b",
+      "userName": "",
+      "email": "a@gmail.com",
+      "password": "222222",
+      "phone": "1211211212",
+      "username": "chewbacca"
+    }
+  ]
+}
