@@ -1,8 +1,12 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "../ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
+  const {theme}= useTheme()
   return (
     <nav className="w-full py-5 flex items-center justify-between">
       <div className="flex items-center gap-8 ">
@@ -25,6 +29,8 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-2">
+        {theme==="light"?<Image src="/search.svg" alt="Search" width={32} height={32} />:<Image src="/searchLight.svg" alt="Search" width={32} height={32}/>}
+
         <Link className={buttonVariants()} href="/sign-up">
           Sign up
         </Link>

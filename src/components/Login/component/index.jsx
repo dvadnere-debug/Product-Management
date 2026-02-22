@@ -18,7 +18,7 @@ export function LoginForm() {
   const { control, handleSubmit, errors, onSubmit } = useLogin();
 
   return (
-    <div className="m-7 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <Card className="mx-auto w-125">
         <CardHeader>
           <CardTitle>Login</CardTitle>

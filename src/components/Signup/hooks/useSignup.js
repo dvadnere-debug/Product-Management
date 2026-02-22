@@ -38,6 +38,8 @@ export default function useSignup(){
 		defaultValues:{
 			email:"",
 			password:"",
+			username:"",
+			phone:""
 			
 		},
 	});
