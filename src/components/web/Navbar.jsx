@@ -24,7 +24,7 @@ export default function Navbar() {
           >
             Dashboard
           </Link>
-          <Link className={buttonVariants({ variant: "ghost" })} href="/Products">Products</Link>
+          <Link className={buttonVariants({ variant: "ghost" })} href="/products">Products</Link>
         </div>
       </div>
 
