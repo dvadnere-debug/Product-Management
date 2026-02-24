@@ -14,15 +14,14 @@ export default async function ProductsPage({ searchParams={} }) {
     )
     .filter((p) => p.price >= minPrice);
 
-  const men = products.filter((p) => p.category.includes("men"));
-  const women = products.filter((p) => p.category.includes("women"));
-console.log(products.map(p => p.category));
+  
+// console.log(products.map(p => p.category));
 
   return (
     <div className="max-w-7xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Products</h1>
       <FilterBar />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center ">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

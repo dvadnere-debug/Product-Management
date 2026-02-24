@@ -28,18 +28,18 @@ export function SignupForm(){
                        control={control}
                        errors={errors}
                      />
+                     <Button
+                   type="submit"
+                   className="w-full text-white bg-blue-400"
+                 >
+                   Signup
+                 </Button>
                    </div>
                  </form>
                </CardContent>
        
                <CardFooter className="flex-col gap-2">
-                 <Button
-                   type="submit"
-                   className="w-full"
-                   onClick={handleSubmit(onSubmit)}
-                 >
-                   Signup
-                 </Button>
+                 
                </CardFooter>
              </Card>
            </div>

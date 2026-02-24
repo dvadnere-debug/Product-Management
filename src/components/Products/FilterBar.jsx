@@ -16,7 +16,7 @@ export default function FilterBar() {
   }
 
   return (
-    <div className="flex gap-4 mb-6">
+    <div className="flex gap-4 mb-6 w-full">
 
       <select
         onChange={e => updateFilter("category", e.target.value)}

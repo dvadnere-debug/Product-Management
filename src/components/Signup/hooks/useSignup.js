@@ -30,8 +30,12 @@
 // export default useSignupForm;
 
 "use client";
+import toast from "react-hot-toast";
 import {useForm} from "react-hook-form";
+import {useRouter} from "next/navigation";
+import {signupUser, loginUser} from "../../../services/authService"
 export default function useSignup(){
+	const router=useRouter();
 	const{
 		control, handleSubmit, formState:{errors },
 	}=useForm({
@@ -43,9 +47,17 @@ export default function useSignup(){
 			
 		},
 	});
-	const onSubmit = (data) => {
-		console.log("login data:",data)
-	};
+	 const onSubmit = (data) => {
+    try {
+      signupUser(data);
+      loginUser(data);
+	  toast.success("signup successful");
+      router.push("/products");
+    } catch (e) {
+    
+	  toast.error("signup failed"|| e.message)
+    }
+  };
 	return{
 		control,
 		handleSubmit,

@@ -35,18 +35,19 @@ export function LoginForm() {
                 control={control}
                 errors={errors}
               />
+               <Button
+            type="submit"
+            className="w-full bg-blue-400 text-white"
+            
+          >
+            Login
+          </Button>
             </div>
           </form>
         </CardContent>
 
         <CardFooter className="flex-col gap-2">
-          <Button
-            type="submit"
-            className="w-full"
-            onClick={handleSubmit(onSubmit)}
-          >
-            Login
-          </Button>
+         
         </CardFooter>
       </Card>
     </div>

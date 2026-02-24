@@ -44,7 +44,6 @@ export default async function LoginPage() {
   await new Promise((r) => setTimeout(r, 3000));
   return (
     <>
-      <h1>hii from LoginPage</h1>
       <LoginForm />
     </>
   );

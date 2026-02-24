@@ -1,94 +1,82 @@
-"use client";
-import { Search, X, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+// "use client";
+// import { Search, X, ChevronRight } from "lucide-react";
+// import { useRef } from "react";
+// import { useRouter } from "next/navigation";
+// export default function SearchOverlay({ onClose }) {
+//   const scrollRef = useRef(null);
+//   const router = useRouter();
+//   const scrollRight = () => {
+//     scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
+//   };
 
-export default function SearchOverlay({ onClose }) {
-  const scrollRef = useRef(null);
+//   return (
+//     <div className="fixed inset-0 bg-white z-50 p-10 overflow-y-auto">
+//       <div className="max-w-7xl mx-auto flex items-start justify-between">
+//         <div className="flex-1">
+//           <div className="flex items-center gap-3 bg-[#F2F2F2] p-4 w-full mb-10">
+//             <Search className="w-6 h-6 text-black" />
+//             <input
+//               className="text-black uppercase text-3xl font-oswald font-bold caret-black w-full bg-transparent outline-none placeholder:text-[#CCCCCC]"
+//               placeholder="TYPE TO SEARCH"
+//               autoFocus
+//             />
+//           </div>
 
-  const scrollRight = () => {
-    scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
-  };
+//           <div className="mb-10">
+//             <p className="text-[12px] font-oswald uppercase tracking-widest mb-4 text-black font-bold">
+//               Popular Searches
+//             </p>
+//             <div className="relative w-full">
+//               <div
+//                 ref={scrollRef}
+//                 className="flex gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] pr-12"
+//               >
+//                 {[
+//                   "CLUBMASTER EYEGLASSES",
+//                   "TITANIUM EYEGLASSES",
+//                   "AVIATOR EYEGLASSES",
+//                   "MOST POPULAR",
+//                   "BLAZE COLLECTION",
+//                   "CLUBMASTER EYEGLASSES",
 
-  return (
-    <div className="fixed inset-0 bg-white z-50 p-10 overflow-y-auto">
-      <div className="max-w-7xl mx-auto flex items-start justify-between">
-        <div className="flex-1">
-          <div className="flex items-center gap-3 bg-[#F2F2F2] p-4 w-full mb-10">
-            <Search className="w-6 h-6 text-black" />
-            <input
-              className="text-black uppercase text-3xl font-oswald font-bold caret-black w-full bg-transparent outline-none placeholder:text-[#CCCCCC]"
-              placeholder="TYPE TO SEARCH"
-              autoFocus
-            />
-          </div>
+//                   "CLUBMASTER EYEGLASSES",
+//                 ].map((item, i) => (
+//                   <button
+//                     key={i}
+//                     className="shrink-0 border border-black px-8 py-3 text-black uppercase font-oswald text-sm"
+//                   >
+//                     {item}
+//                   </button>
+//                 ))}
+//               </div>
+//               <button
+//                 onClick={scrollRight}
+//                 className="absolute right-0 top-0 bottom-0 bg-[#222222] text-white px-3 flex items-center justify-center"
+//               >
+//                 <ChevronRight size={18} />
+//               </button>
+//             </div>
+//           </div>
 
-          <div className="mb-10">
-            <p className="text-[12px] font-oswald uppercase tracking-widest mb-4 text-black font-bold">
-              Your Recent Searches
-            </p>
-            <div className="flex gap-4">
-              {["DFD", "DJD"].map((term) => (
-                <button
-                  key={term}
-                  className="border border-black px-10 py-2 text-black font-oswald text-sm"
-                >
-                  {term}
-                </button>
-              ))}
-            </div>
-          </div>
+//           <div>
+//             <p className="text-[12px] font-oswald uppercase tracking-widest mb-4 text-black font-bold">
+//               Popular Items
+//             </p>
+//           </div>
+//         </div>
 
-          <div className="mb-10">
-            <p className="text-[12px] font-oswald uppercase tracking-widest mb-4 text-black font-bold">
-              Popular Searches
-            </p>
-            <div className="relative w-full">
-              <div
-                ref={scrollRef}
-                className="flex gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] pr-12"
-              >
-                {[
-                  "CLUBMASTER EYEGLASSES",
-                  "TITANIUM EYEGLASSES",
-                  "AVIATOR EYEGLASSES",
-                  "MOST POPULAR",
-                  "BLAZE COLLECTION",
-                  "CLUBMASTER EYEGLASSES",
+//         <button onClick={onClose} className="ml-16 mt-2">
+//           <X onClick={()=> router.push("/products")}
+//             className="w-10 h-10 cursor-pointer text-black hover:opacity-70 transition-opacity"
+//             strokeWidth={1}
+//           />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
-                  "CLUBMASTER EYEGLASSES",
-                ].map((item, i) => (
-                  <button
-                    key={i}
-                    className="shrink-0 border border-black px-8 py-3 text-black uppercase font-oswald text-sm"
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
-              <button
-                onClick={scrollRight}
-                className="absolute right-0 top-0 bottom-0 bg-[#222222] text-white px-3 flex items-center justify-center"
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-[12px] font-oswald uppercase tracking-widest mb-4 text-black font-bold">
-              Popular Items
-            </p>
-          </div>
-        </div>
-
-      
-        <button onClick={onClose} className="ml-16 mt-2">
-          <X
-            className="w-10 h-10 cursor-pointer text-black hover:opacity-70 transition-opacity"
-            strokeWidth={1}
-          />
-        </button>
-      </div>
-    </div>
-  );
+import { SearchOverlay } from "../../../components/web/SearchBar";
+export default function Search(){
+    return <SearchOverlay/>
 }
